@@ -31,6 +31,12 @@
 *.out
 *.app
 
-#vscode files
+#VSCode files
 .vscode
 settings.json
+
+#Created Binary
+emu-comp
+
+#My input test file
+input
