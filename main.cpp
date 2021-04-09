@@ -24,7 +24,7 @@ int main(){
         ss << input;
         ss >> std::hex >> hex;
 
-        if(hex != 0x00 && inc <= bus.ram.MAX_ADDR){
+        if(hex != -0x01 && inc <= bus.ram.MAX_ADDR){
             bus.ram.Write(hex, inc);
         }
         else{
@@ -37,7 +37,7 @@ int main(){
     do{
         bus.cpu.Fetch();
         bus.cpu.RunInstruction();
-    }while(bus.cpu.opcode);
+    }while(bus.cpu.pc <= bus.ram.MAX_ADDR);
 
     bus.cpu.PrintRegisters();
     bus.ram.Print();
