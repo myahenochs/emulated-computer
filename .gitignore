@@ -31,6 +31,9 @@
 *.out
 *.app
 
-#vscode files
+#VSCode files
 .vscode
 settings.json
+
+#Created Binary
+emu-comp
